@@ -16,7 +16,7 @@ public class CajaDeAhorro extends Cuenta implements IGestionSaldo {
         if (monto <= 0) {
             return false;
         } else {
-            saldo=+ monto;
+            saldo += monto;
             operaciones++;
             return true;
         }
@@ -25,7 +25,7 @@ public class CajaDeAhorro extends Cuenta implements IGestionSaldo {
     @Override
     public synchronized boolean quitarSaldo(double monto) {
         if (monto > 0 && (super.getSaldo() > monto)) {
-            saldo =- monto;
+            saldo -= monto;
             operaciones++;
             return true;
         } else {
